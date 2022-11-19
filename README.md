@@ -1,1 +1,1 @@
-# Path Visualizer AI Class
+# Path Visualizer CS 420
