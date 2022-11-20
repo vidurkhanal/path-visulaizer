@@ -8,7 +8,7 @@ export default function Home(): ReactElement {
             <Head>
                 <title>Path Visualizer</title>
                 <meta name="description" content="Path visualizer app" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.png" />
             </Head>
 
             <main>

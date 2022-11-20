@@ -238,7 +238,41 @@ export const Pathfind: React.FC<IPathFind> = ({
                     </div>
                 </div>
             </nav>
-            <div className="grid items-center justify-center h-screen">
+            <div className="grid items-center justify-center py-5">
+                <div className="flex items-center justify-between">
+                    <span className="flex items-center px-3">
+                        <div
+                            className={`w-5 h-5 transition-colors duration-75 ease-in outline outline-1  outline-blue-300 inline-block bg-red-400 `}
+                        />{" "}
+                        <span>&nbsp; Finish Point</span>
+                    </span>
+                    <span className="flex items-center px-3">
+                        <div
+                            className={`w-5 h-5 transition-colors duration-75 ease-in outline outline-1  outline-blue-300 inline-block bg-green-400`}
+                        />{" "}
+                        <span>&nbsp; Start Point</span>
+                    </span>
+                    <span className="flex items-center px-3">
+                        <div
+                            className={`w-5 h-5 transition-colors duration-75 ease-in outline outline-1  outline-blue-300 inline-block bg-stone-900 `}
+                        />{" "}
+                        <span>&nbsp; Wall</span>
+                    </span>
+                    <span className="flex items-center px-3">
+                        <div
+                            className={`w-5 h-5 transition-colors duration-75 ease-in outline outline-1  outline-blue-300 inline-block bg-yellow-200 `}
+                        />{" "}
+                        <span>&nbsp; Shortest Path</span>
+                    </span>
+                    <span className="flex items-center px-3">
+                        <div
+                            className={`w-5 h-5 transition-colors duration-75 ease-in outline outline-1  outline-blue-300 inline-block bg-blue-200 `}
+                        />{" "}
+                        <span>&nbsp; Visited Node</span>
+                    </span>
+                </div>
+            </div>
+            <div className="grid items-center justify-center h-[80vh]">
                 <div>
                     {grid.map((row, rowIndx) => {
                         return (
