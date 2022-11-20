@@ -4,16 +4,17 @@
 
 import { INode } from "../components/Pathfind";
 
-export function dijkstra(
+export function AStar(
     grid: INode[][],
     startNode: INode,
     finishNode: INode
 ): INode[] | undefined {
     const visitedNodesInOrder = [];
     startNode.distance = 0;
-    const unvisitedNodes = getAllNodes(grid);
+    const unvisitedNodes = getAllNodes(grid); // Q: different from using grid or slice of grid???
+
     while (unvisitedNodes.length > 0) {
-        sortNodesByDistance(unvisitedNodes);
+        sortByDistance(unvisitedNodes);
         const closestNode = unvisitedNodes.shift() as INode;
         // If we encounter a wall, we skip it.
         if (!closestNode.isWall) {
@@ -38,14 +39,14 @@ function getAllNodes(grid: INode[][]): INode[] {
     return nodes;
 }
 
-function sortNodesByDistance(unvisitedNodes: INode[]): void {
+function sortByDistance(unvisitedNodes: INode[]): void {
     unvisitedNodes.sort((nodeA, nodeB) => nodeA.distance - nodeB.distance);
 }
 
 function updateUnvisitedNeighbors(node: INode, grid: INode[][]): void {
     const unvisitedNeighbors = getUnvisitedNeighbors(node, grid);
     for (const neighbor of unvisitedNeighbors) {
-        neighbor.distance = node.distance + 1;
+        neighbor.distance = node.distance + 1 + neighbor.distanceToFinishNode;
         neighbor.previousNode = node;
     }
 }

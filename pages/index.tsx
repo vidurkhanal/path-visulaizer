@@ -13,10 +13,10 @@ export default function Home(): ReactElement {
 
             <main>
                 <Pathfind
-                    GRID_ROWS={20}
-                    GRID_COLUMNS={50}
-                    FINISH_NODE_COLUMN={34}
-                    FINISH_NODE_ROW={3}
+                    GRID_ROWS={25}
+                    GRID_COLUMNS={70}
+                    FINISH_NODE_COLUMN={15}
+                    FINISH_NODE_ROW={23}
                     START_NODE_COLUMN={30}
                     START_NODE_ROW={10}
                 />

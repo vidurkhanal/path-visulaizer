@@ -19,7 +19,9 @@ export const Node: React.FC<INodeProps> = ({
         ? "bg-green-400"
         : data.isWall
         ? "bg-stone-900"
-        : data.isVisited
+        : data.isAShortPath
+        ? "bg-yellow-200 !important"
+        : data.isColoredVisit
         ? "bg-blue-200"
         : "";
 
